@@ -1,0 +1,9 @@
+/* CSS Document */
+
+.hover1 {float:left; position:relative; }
+.hover2 { position:absolute; top:0; left:0; width:89px; height:158px; padding:105px 5px 0 5px; }
+h1.clickthrough {text-align:center; font-size:18px; font-weight:normal; margin:0 0 5px 0; padding:0;}
+div.more {position:absolute; bottom:0; left:0; width:99px; text-align:center}
+div.more a {color:#333333; font-size:12px; font-weight:normal;}
+.hover3 {position:absolute; top:0; left:0; width:99px; height:264px;}
+.hover3 a img {width:99px; height:264px;} 

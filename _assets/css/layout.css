@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+	#layout {float:left; width:574px; height:155px; position:relative; border-bottom:1px solid #F47727; margin:0 0 6px 5px; display:inline; background:url("../images/fslayout.gif") no-repeat left top; padding:13px 0 15px 11px;}
+	#layout img {float:left;margin:0 0 5px 0;}
+	#layout div {float:left; border:0px solid red; padding:5px 0 0 7px; width:55px; margin-right:3px; display:inline;}
+	#layout div.meeting {margin:0 48px 0 34px; display:inline; width:41px; padding:45px 0 0 10px}
+	#layout div.meeting1 {margin:0 50px 0 0; display:inline;width:21px; padding:45px 0 0 30px}
+	#layout div.right {margin:0;}
+	.search {width:585px; border:1px solid #CCCCCC; margin-bottom:10px;}
+	.search h3 {margin:0; padding:0; color:#666666; font-size:12px;}
+	td.colname {width:20%;}
+	.key tr {height:10px;}
+	.results {width:585px;border-bottom:1px solid #CCCCCC;}
+	.results th {border-bottom:1px solid #CCCCCC; color:#666666}
+	.results td {text-align:center;}

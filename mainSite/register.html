@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+
+<title>The Old Church School - Serviced office space rental in Somerset</title>
+<meta name="description" content="The Old Church School - flexible serviced office space in Frome, Somerset" />
+<meta name="keywords" content="The Old Church School, Office space, serviced office, meeting room, near Bath, breakfast, broadband, wifi, voip, digital projectors, Frome, Somerset, Mendip, hot desking, flexible, rented, shared, innovative, incubation, community, start up, networking, flexible pricing, professionals" />
+
+<script src = "../js/preloader.js" type="text/javascript"></script>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" /> 
+<script src = "../js/hover.js" type="text/javascript"></script>
+<script src = "../js/js.js" type="text/javascript"></script>
+<script src = "../js/swfobject.js" type="text/javascript"></script>
+<script type="text/javascript"><!--		
+		// remote scripting library
+		// (c) copyright 2005 modernmethod, inc
+		var sajax_debug_mode = false;
+		var sajax_request_type = "GET";
+		var sajax_target_id = "";
+		var sajax_failure_redirect = "";
+		
+		function sajax_debug(text) {
+			if (sajax_debug_mode)
+				alert(text);
+		}
+		
+ 		function sajax_init_object() {
+ 			sajax_debug("sajax_init_object() called..")
+ 			
+ 			var A;
+ 			
+ 			var msxmlhttp = new Array(
+				'Msxml2.XMLHTTP.5.0',
+				'Msxml2.XMLHTTP.4.0',
+				'Msxml2.XMLHTTP.3.0',
+				'Msxml2.XMLHTTP',
+				'Microsoft.XMLHTTP');
+			for (var i = 0; i < msxmlhttp.length; i++) {
+				try {
+					A = new ActiveXObject(msxmlhttp[i]);
+				} catch (e) {
+					A = null;
+				}
+			}
+ 			
+			if(!A && typeof XMLHttpRequest != "undefined")
+				A = new XMLHttpRequest();
+			if (!A)
+				sajax_debug("Could not create connection object.");
+			return A;
+		}
+		
+		var sajax_requests = new Array();
+		
+		function sajax_cancel() {
+			for (var i = 0; i < sajax_requests.length; i++) 
+				sajax_requests[i].abort();
+		}
+		
+		function sajax_do_call(func_name, args) {
+			var i, x, n;
+			var uri;
+			var post_data;
+			var target_id;
+			
+			sajax_debug("in sajax_do_call().." + sajax_request_type + "/" + sajax_target_id);
+			target_id = sajax_target_id;
+			if (typeof(sajax_request_type) == "undefined" || sajax_request_type == "") 
+				sajax_request_type = "GET";
+			
+			uri = "/registration/";
+			if (sajax_request_type == "GET") {
+			
+				if (uri.indexOf("?") == -1) 
+					uri += "?rs=" + escape(func_name);
+				else
+					uri += "&rs=" + escape(func_name);
+				uri += "&rst=" + escape(sajax_target_id);
+				uri += "&rsrnd=" + new Date().getTime();
+				
+				for (i = 0; i < args.length-1; i++) 
+					uri += "&rsargs[]=" + escape(args[i]);
+
+				post_data = null;
+			} 
+			else if (sajax_request_type == "POST") {
+				post_data = "rs=" + escape(func_name);
+				post_data += "&rst=" + escape(sajax_target_id);
+				post_data += "&rsrnd=" + new Date().getTime();
+				
+				for (i = 0; i < args.length-1; i++) 
+					post_data = post_data + "&rsargs[]=" + escape(args[i]);
+			}
+			else {
+				alert("Illegal request type: " + sajax_request_type);
+			}
+			
+			x = sajax_init_object();
+			if (x == null) {
+				if (sajax_failure_redirect != "") {
+					location.href = sajax_failure_redirect;
+					return false;
+				} else {
+					sajax_debug("NULL sajax object for user agent:\n" + navigator.userAgent);
+					return false;
+				}
+			} else {
+				x.open(sajax_request_type, uri, true);
+				// window.open(uri);
+				
+				sajax_requests[sajax_requests.length] = x;
+				
+				if (sajax_request_type == "POST") {
+					x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");
+					x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				}
+			
+				x.onreadystatechange = function() {
+					if (x.readyState != 4) 
+						return;
+
+					sajax_debug("received " + x.responseText);
+				
+					var status;
+					var data;
+					var txt = x.responseText.replace(/^\s*|\s*$/g,"");
+					status = txt.charAt(0);
+					data = txt.substring(2);
+
+					if (status == "") {
+						// let's just assume this is a pre-response bailout and let it slide for now
+					} else if (status == "-") 
+						alert("Error: " + data);
+					else {
+						if (target_id != "") 
+							document.getElementById(target_id).innerHTML = eval(data);
+						else {
+							try {
+								var callback;
+								var extra_data = false;
+								if (typeof args[args.length-1] == "object") {
+									callback = args[args.length-1].callback;
+									extra_data = args[args.length-1].extra_data;
+								} else {
+									callback = args[args.length-1];
+								}
+								callback(eval(data), extra_data);
+							} catch (e) {
+								sajax_debug("Caught error " + e + ": Could not eval " + data );
+							}
+						}
+					}
+				}
+			}
+			
+			sajax_debug(func_name + " uri = " + uri + "/post = " + post_data);
+			x.send(post_data);
+			sajax_debug(func_name + " waiting..");
+			delete x;
+			return true;
+		}
+		
+				
+		// wrapper for desk_cart		
+		function x_desk_cart() {
+			sajax_do_call("desk_cart",
+				x_desk_cart.arguments);
+		}
+		
+		--></script>
+<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+<link rel="stylesheet" type="text/css" href="../css/stylestables-x=x.css"  />
+<link rel="stylesheet" type="text/css" href="../css/hover.css" />
+<link rel="stylesheet" type="text/css" href="../css/hover1.css" />
+<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+<link rel="stylesheet" type="text/css" href="../css/newstyles.css" />
+
+
+
+
+</head>
+
+
+
+<body>
+
+<div id="wrapper" >
+	<div id="left">
+		<div id="logo"><a href="../index.html"><img src="../images/new/logo.jpg" alt="" /></a></div>
+		<div id="nav">
+			<div class="menuitem active">
+				<a href="../index.html"><img src="../images/new/home.jpg" alt="" /></a>
+				<a href="../index.html">Home</a>
+			</div>
+			<div class="menuitem">
+				<a href="../about/index.html"><img src="../images/new/about.jpg" alt="" /></a>
+				<a  href="../about/index.html">About</a>
+			</div>
+			<div class="menuitem">
+				<a href="../blog/index.html"><img src="../images/new/news.jpg" alt="" /></a>
+				<a  href="../blog/index.html">Blog</a>
+			</div>
+			<div class="menuitem">
+				<a href="../resources/index.html"><img src="../images/new/resources.jpg" alt="" /></a>
+				<a  href="../resources/index.html">Resources</a>
+			</div>
+			<div class="menuitem">
+				<a href="../booking/index.html"><img src="../images/new/bookspace.jpg" alt="" /></a>
+				<a  href="../booking/index.html">Book Space</a>
+			</div>
+			<div class="menuitem">
+				<a href="../facilities/index.html"><img src="../images/new/facilities.jpg" alt="" /></a>
+				<a  href="../facilities/index.html">Facilities</a>
+			</div>
+			<div class="menuitem">
+				<a href="../tariffs/index.html"><img src="../images/new/tariffs.jpg" alt="" /></a>
+				<a  href="../tariffs/index.html">Tariffs</a>
+			</div>
+			<div class="menuitem">
+				<a href="../findus/index.html"><img src="../images/new/findus.jpg" alt="" /></a>
+				<a  href="../findus/index.html">Find Us</a>
+			</div>
+			<div class="menuitem">
+				<a href="../contact/index.html"><img src="../images/new/contactus.jpg" alt="" /></a>
+				<a  href="../contact/index.html">Contact</a>
+			</div>
+			<div class="menuitem">
+									<a href="../login/index.html"><img src="../images/new/login.jpg" alt="" /></a>
+					<a  href="../login/index.html">Login</a>
+							</div>
+		</div>
+		<div id="telephoneno">
+			<h2>01373 888108</h2>
+			<a href="../legal/index.html">Disclaimer</a>
+		</div>
+	</div>
+				
+		<div id="middle" style="background-image:url('../images/new/defaultback.jpg')">
+		
+				<h2></h2>
+					</div>
+		<div id="right">	
+		<p>Use the form below to sign up for membership of The Old Church School. Membership allows you to book your office space online. <br />
+<br />
+To find out more about about becoming a&nbsp; member and the different tarrifs we offer, see our <a title="Booking Guide" href="../bookingguide/index.html">Booking Guide</a>&nbsp;</p>
+<form method="post" name="appform" id="appform" onsubmit="return validate_erg(this.form);">
+  <table>
+    <tr>
+      <th scope="row">Title</th>
+      <td><input type="text" name="Title" id="Title" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Surname</th>
+      <td><input type="text" name="Surname" id="Surname" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Forename</th>
+      <td><input type="text" name="Forename" id="Forename" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Position</th>
+      <td><input type="text" name="Position" id="Position" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Company</th>
+      <td><input type="text" name="Company" id="Company" /></td>
+    </tr>
+    <tr>
+      <th valign="top" scope="row">Description</th>
+      <td><textarea name="Description" rows="4" id="Description"></textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">Telephone</th>
+      <td><input type="text" name="Telephone" id="Telephone" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><input type="text" name="Email" id="Email" /></td>
+    </tr>
+    <tr>
+      <th valign="top" scope="row">Address</th>
+      <td><textarea name="Address" rows="4" id="Address"></textarea></td>
+    </tr>
+    <tr>
+      <th scope="row">Post Code</th>
+      <td><input type="text" name="PostCode" id="Code" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Preferred Tariff</th>
+      <td> <select name=Tariff id=Tariff><option value="1">Connected</option>
+<option value="2">Space30</option>
+<option value="3">Space60</option>
+<option value="4">Space120</option>
+<option value="5">Open Space 1 Px</option>
+<option value="7">Space90</option>
+<option value="8">Studio 5</option>
+<option value="9">Studio 4</option>
+<option value="10">Studio 3</option>
+<option value="11">Studio 2</option>
+<option value="12">Studio 1</option>
+<option value="13">Open Space 2 Px</option>
+<option value="14">Open Space 3 Px</option>
+<option value="15">Open Space 4 Px</option>
+<option value="16">Open Space 5 Px</option>
+<option value="17">Open Space 6 Px</option>
+<option value="20">Virtual</option>
+<option value="21">Space15</option>
+</select>
+      
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Terms</th>
+      <td>  <input type="checkbox" value="tc" name="tc"> I agree to abide by the <a href="../terms/index.html" target="_blank">terms and conditions</a>.
+      
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row" align="right"><input type="submit" name="button" id="button" value="Send Application" /></th>
+    </tr>
+  </table>
+</form> </div>
+</div>
+
+</body>
+</html>
+ 

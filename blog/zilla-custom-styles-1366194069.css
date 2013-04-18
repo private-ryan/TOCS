@@ -1,0 +1,14 @@
+#footer a:hover,
+.feature-credit a:hover,
+.feature-content a:hover {
+	color: #a9d039 !important;
+}.feature-navigation a:hover,
+.footer-widgets .zilla_flickr_widget a:hover img,
+#footer-feature-nav a:hover,
+.post-thumb a:hover,
+.comment.author-comment .avatar,
+#commentform .form-submit input:hover,
+.contactform li button:hover,
+.zilla-popular-widget-nav a:hover {
+	background-color: #a9d039 !important;
+}

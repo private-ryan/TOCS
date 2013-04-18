@@ -1,0 +1,324 @@
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+
+a img{
+	border:none;
+}
+
+body{
+	text-align:center;
+	margin-top:0;
+	background:none;
+	background-color:#646464;
+}
+
+#wrapper{
+	width:970px;
+	margin:0 auto;
+	background:url("../images/wrapback.jpg") top left repeat-y;
+	background-color:#383838;
+	text-align:left;
+	overflow:hidden;
+	font-family:"Helvetica";
+}
+
+#left{
+	width:193px;
+	float:left;
+	overflow:hidden;
+}
+
+#logo{
+	width:193px;
+	float:left;
+	margin-top:15px;
+	display:inline;
+	padding-bottom:5px;
+	margin-left:28px;
+	display:inline;
+}
+
+#nav{
+	width:193px;
+	float:left;
+	padding-left:4px;
+	display:inline;
+	margin-left:22px;
+	margin-top:15px;
+}
+
+#nav a{
+	font-weight:normal;
+}
+
+#nav .menuitem{
+	width:68px;
+	height:63px;
+	float:left;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+#nav .menuitem img{
+	padding-bottom:2px;
+	margin:0px;
+	padding:0px;
+	float:left;
+	margin-left:10px;
+	padding-bottom:2px;
+}
+
+#nav .menuitem a{
+	font-size:11px;
+	color:#6c6c6c;
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+}
+
+#nav .menuitem .active{
+	color:#FFF;
+	font-weight:bold;
+}
+
+#telephoneno{
+	width:193px;
+	float:left;
+	text-align:center;
+}
+
+#telephoneno h2{
+	font-weight:normal;
+	color:#FFF;
+	font-size:19px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family: Arial Narrow bold, Arial, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+#telephoneno a{
+	text-decoration:none;
+	color:#6c6c6c;
+	font-size:11px;
+}
+
+#middle{
+	width:294px;
+	height:659px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-color:#4B4B4B;
+	float:left;
+}
+
+#middle h2{
+	font-size:32px;
+	color:#f9f9f9;
+	text-transform:uppercase;
+	padding:17px 0px 0px 15px;
+	font-family: Arial Narrow bold, Arial bold, Arial, Helvetica, sans-serif;
+	letter-spacing:-1px;
+}
+
+#right{
+	width:453px;
+	height:639px;
+	float:left;
+	padding:20px 15px 0px 15px;
+	overflow:auto;
+}
+
+#right p{
+	font-size:13px;
+	color:#FFF;
+	line-height:17px;
+	padding-bottom:10px;
+}
+
+#right a{
+	color:#a9d039;
+	text-decoration:none;
+}
+
+#right h2{
+	width:425px;
+	display:block;
+	background-color:#4b4b4b;
+	color:#FFF;
+	font-size:15px;
+	font-weight:bold;
+	padding:5px 5px 6px 5px;
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+#right h3 {
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:18px;
+	margin:10px 0;
+	font-weight:normal;
+	color:#FFFFFF;
+	padding: 5px 5px 6px 0;
+}
+
+#homediv{
+	width:777px;
+	height:659px;
+	float:left;
+	background:url("../images/homeback.jpg") top left no-repeat;
+}
+
+#homediv #text{
+	width:370px;
+	float:left;
+	margin-left:100px;
+	margin-top:170px;
+}
+
+#homediv #text p{
+	font-size:14px;
+	color:#FFF;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	line-height:130%;
+}
+
+#homediv #text a{
+	font-size:15px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#deskplan{
+	height:245px;
+}
+
+#key{
+	background-color:#FFF;
+	margin-top:15px;
+}
+
+#key table tr td h2{
+	width:50px;
+	background-color:#FFF;
+}
+
+#right .confirm_book h2{
+	width:150px;
+	background-color:#383838;
+}
+
+#right form{
+	margin-top:10px;
+	color:#FFF;
+}
+
+#right .search tr td h2{
+	width:auto;
+	background-color:#383838;
+}
+
+#right .search tr td p{
+	padding-top:5px;
+}
+
+.bPost, .bPostpublished{
+	border-bottom:1px dashed #DDDDDD;
+}
+
+
+
+#sitecontentrighttextinternal{
+	width:360px;
+	margin:0px;
+}
+
+#sitecontentrighttextinternal .bPosts h2{
+	width:110px;
+	float:left;
+	background-color:#383838;
+	border-bottom:none;
+	margin-left:11px;
+}
+
+.bTitle{
+	color:#A9D039;
+}
+
+.bPosts{
+	width:380px;
+}
+
+.minheight{
+	display:none;
+}
+
+#blogleft{
+	width:320px;
+	height:659px;
+	float:left;
+	background-color:#33CCFF;
+	border-left:1px solid #636363;
+	border-right:1px solid #636363;
+	background-color:#494949;
+	padding:0px 15px 0px 15px;
+	margin-bottom:-2000px;
+	padding-bottom:2000px;
+}
+
+#blogleft h1{
+	color:#F9F9F9;
+	font-family:Arial Narrow bold,Arial bold,Arial,Helvetica,sans-serif;
+	font-size:32px;
+	letter-spacing:-1px;
+	padding:17px 0 0 0px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.resourcetable td {
+	color:#FFF;
+}
+
+.downloads tr th{
+	color:#FFF;
+}
+
+.downloads tr .filesize{
+	color:#FFF;
+}
+
+#headerdiv h1{
+color:#F9F9F9;
+	font-family:Arial Narrow bold,Arial bold,Arial,Helvetica,sans-serif;
+	font-size:32px;
+	letter-spacing:-1px;
+	padding:0px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+#homenewsletter{
+	float:right;
+	margin-top:560px;
+	margin-right:8px;
+}
+
+#homenewsletter a{
+	color:#FFF;
+	text-decoration:none;
+	font-size:15px;
+	font-weight:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+#tblink{
+	margin:0 auto;
+	padding-top:5px;
+}
+
+#tblink a{
+	font-size:13px;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en" />
+
+<title>The Old Church School - Serviced office space rental in Somerset</title>
+<meta name="description" content="The Old Church School - flexible serviced office space in Frome, Somerset" />
+<meta name="keywords" content="The Old Church School, Office space, serviced office, meeting room, near Bath, breakfast, broadband, wifi, voip, digital projectors, Frome, Somerset, Mendip, hot desking, flexible, rented, shared, innovative, incubation, community, start up, networking, flexible pricing, professionals" />
+
+<script src = "../js/preloader.js" type="text/javascript"></script>
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.png" /> 
+<script src = "../js/hover.js" type="text/javascript"></script>
+<script src = "../js/js.js" type="text/javascript"></script>
+<script src = "../js/swfobject.js" type="text/javascript"></script>
+<script type="text/javascript"><!--		
+		// remote scripting library
+		// (c) copyright 2005 modernmethod, inc
+		var sajax_debug_mode = false;
+		var sajax_request_type = "GET";
+		var sajax_target_id = "";
+		var sajax_failure_redirect = "";
+		
+		function sajax_debug(text) {
+			if (sajax_debug_mode)
+				alert(text);
+		}
+		
+ 		function sajax_init_object() {
+ 			sajax_debug("sajax_init_object() called..")
+ 			
+ 			var A;
+ 			
+ 			var msxmlhttp = new Array(
+				'Msxml2.XMLHTTP.5.0',
+				'Msxml2.XMLHTTP.4.0',
+				'Msxml2.XMLHTTP.3.0',
+				'Msxml2.XMLHTTP',
+				'Microsoft.XMLHTTP');
+			for (var i = 0; i < msxmlhttp.length; i++) {
+				try {
+					A = new ActiveXObject(msxmlhttp[i]);
+				} catch (e) {
+					A = null;
+				}
+			}
+ 			
+			if(!A && typeof XMLHttpRequest != "undefined")
+				A = new XMLHttpRequest();
+			if (!A)
+				sajax_debug("Could not create connection object.");
+			return A;
+		}
+		
+		var sajax_requests = new Array();
+		
+		function sajax_cancel() {
+			for (var i = 0; i < sajax_requests.length; i++) 
+				sajax_requests[i].abort();
+		}
+		
+		function sajax_do_call(func_name, args) {
+			var i, x, n;
+			var uri;
+			var post_data;
+			var target_id;
+			
+			sajax_debug("in sajax_do_call().." + sajax_request_type + "/" + sajax_target_id);
+			target_id = sajax_target_id;
+			if (typeof(sajax_request_type) == "undefined" || sajax_request_type == "") 
+				sajax_request_type = "GET";
+			
+			uri = "/terms/";
+			if (sajax_request_type == "GET") {
+			
+				if (uri.indexOf("?") == -1) 
+					uri += "?rs=" + escape(func_name);
+				else
+					uri += "&rs=" + escape(func_name);
+				uri += "&rst=" + escape(sajax_target_id);
+				uri += "&rsrnd=" + new Date().getTime();
+				
+				for (i = 0; i < args.length-1; i++) 
+					uri += "&rsargs[]=" + escape(args[i]);
+
+				post_data = null;
+			} 
+			else if (sajax_request_type == "POST") {
+				post_data = "rs=" + escape(func_name);
+				post_data += "&rst=" + escape(sajax_target_id);
+				post_data += "&rsrnd=" + new Date().getTime();
+				
+				for (i = 0; i < args.length-1; i++) 
+					post_data = post_data + "&rsargs[]=" + escape(args[i]);
+			}
+			else {
+				alert("Illegal request type: " + sajax_request_type);
+			}
+			
+			x = sajax_init_object();
+			if (x == null) {
+				if (sajax_failure_redirect != "") {
+					location.href = sajax_failure_redirect;
+					return false;
+				} else {
+					sajax_debug("NULL sajax object for user agent:\n" + navigator.userAgent);
+					return false;
+				}
+			} else {
+				x.open(sajax_request_type, uri, true);
+				// window.open(uri);
+				
+				sajax_requests[sajax_requests.length] = x;
+				
+				if (sajax_request_type == "POST") {
+					x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");
+					x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				}
+			
+				x.onreadystatechange = function() {
+					if (x.readyState != 4) 
+						return;
+
+					sajax_debug("received " + x.responseText);
+				
+					var status;
+					var data;
+					var txt = x.responseText.replace(/^\s*|\s*$/g,"");
+					status = txt.charAt(0);
+					data = txt.substring(2);
+
+					if (status == "") {
+						// let's just assume this is a pre-response bailout and let it slide for now
+					} else if (status == "-") 
+						alert("Error: " + data);
+					else {
+						if (target_id != "") 
+							document.getElementById(target_id).innerHTML = eval(data);
+						else {
+							try {
+								var callback;
+								var extra_data = false;
+								if (typeof args[args.length-1] == "object") {
+									callback = args[args.length-1].callback;
+									extra_data = args[args.length-1].extra_data;
+								} else {
+									callback = args[args.length-1];
+								}
+								callback(eval(data), extra_data);
+							} catch (e) {
+								sajax_debug("Caught error " + e + ": Could not eval " + data );
+							}
+						}
+					}
+				}
+			}
+			
+			sajax_debug(func_name + " uri = " + uri + "/post = " + post_data);
+			x.send(post_data);
+			sajax_debug(func_name + " waiting..");
+			delete x;
+			return true;
+		}
+		
+				
+		// wrapper for desk_cart		
+		function x_desk_cart() {
+			sajax_do_call("desk_cart",
+				x_desk_cart.arguments);
+		}
+		
+		--></script>
+<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+<link rel="stylesheet" type="text/css" href="../css/stylestables-x=x.css"  />
+<link rel="stylesheet" type="text/css" href="../css/hover.css" />
+<link rel="stylesheet" type="text/css" href="../css/hover1.css" />
+<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+<link rel="stylesheet" type="text/css" href="../css/newstyles.css" />
+
+
+
+
+</head>
+
+
+
+<body>
+
+<div id="wrapper" >
+	<div id="left">
+		<div id="logo"><a href="../index.html"><img src="../images/new/logo.jpg" alt="" /></a></div>
+		<div id="nav">
+			<div class="menuitem active">
+				<a href="../index.html"><img src="../images/new/home.jpg" alt="" /></a>
+				<a href="../index.html">Home</a>
+			</div>
+			<div class="menuitem">
+				<a href="../about/index.html"><img src="../images/new/about.jpg" alt="" /></a>
+				<a  href="../about/index.html">About</a>
+			</div>
+			<div class="menuitem">
+				<a href="../blog/index.html"><img src="../images/new/news.jpg" alt="" /></a>
+				<a  href="../blog/index.html">Blog</a>
+			</div>
+			<div class="menuitem">
+				<a href="../resources/index.html"><img src="../images/new/resources.jpg" alt="" /></a>
+				<a  href="../resources/index.html">Resources</a>
+			</div>
+			<div class="menuitem">
+				<a href="../booking/index.html"><img src="../images/new/bookspace.jpg" alt="" /></a>
+				<a  href="../booking/index.html">Book Space</a>
+			</div>
+			<div class="menuitem">
+				<a href="../facilities/index.html"><img src="../images/new/facilities.jpg" alt="" /></a>
+				<a  href="../facilities/index.html">Facilities</a>
+			</div>
+			<div class="menuitem">
+				<a href="../tariffs/index.html"><img src="../images/new/tariffs.jpg" alt="" /></a>
+				<a  href="../tariffs/index.html">Tariffs</a>
+			</div>
+			<div class="menuitem">
+				<a href="../findus/index.html"><img src="../images/new/findus.jpg" alt="" /></a>
+				<a  href="../findus/index.html">Find Us</a>
+			</div>
+			<div class="menuitem">
+				<a href="../contact/index.html"><img src="../images/new/contactus.jpg" alt="" /></a>
+				<a  href="../contact/index.html">Contact</a>
+			</div>
+			<div class="menuitem">
+									<a href="../login/index.html"><img src="../images/new/login.jpg" alt="" /></a>
+					<a  href="../login/index.html">Login</a>
+							</div>
+		</div>
+		<div id="telephoneno">
+			<h2>01373 888108</h2>
+			<a href="../legal/index.html">Disclaimer</a>
+		</div>
+	</div>
+				
+		<div id="middle" style="background-image:url('../images/new/defaultback.jpg')">
+		
+				<h2></h2>
+					</div>
+		<div id="right">	
+		<p>1.&nbsp;&nbsp;&nbsp; Definitions and Interpretation<br />
+<br />
+1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ldquo;Equipment&rdquo; means any of our equipment, systems or facilities used by you directly or indirectly in the supply of the Services;<br />
+<br />
+&ldquo;Facility&rdquo; means the facility where the Services are provided at The Old Church School, Butts Hill, Frome, BA11 1HR;<br />
+<br />
+&ldquo;Services&rdquo; means the services to be provided by us as detailed overleaf to you which are governed by these terms and conditions;<br />
+<br />
+&ldquo;we&rdquo; &ldquo;us&rdquo; or &ldquo;our&rdquo; means Forward Space Limited of The Old Church School, Butts Hill, Frome, BA11 1HR;<br />
+<br />
+&ldquo;Working Day&rdquo; means a day (other than a Saturday or Sunday) on which commercial banks are open for general business in England;<br />
+<br />
+&ldquo;you&rdquo; or &ldquo;your&rdquo; means the person, organisation or company who purchases Services from us.<br />
+<br />
+1.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Condition and paragraph headings shall not affect the interpretation of these terms and conditions.<br />
+<br />
+1.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Words in the singular shall include the plural and vice versa.<br />
+<br />
+1.4&nbsp;&nbsp;&nbsp;&nbsp; A reference to writing or written includes faxes and e-mail.<br />
+<br />
+1.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any obligation in these terms and conditions on a person not to do something includes an obligation not to agree, allow, permit or acquiesce in that thing being done.<br />
+<br />
+2.&nbsp;&nbsp; Application of Conditions<br />
+<br />
+2.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; These terms and conditions shall apply to all contracts for the supply of Services by us to you.<br />
+<br />
+2.2.&nbsp;&nbsp;&nbsp; No variation to these terms and conditions is valid or shall be binding unless confirmed in writing by us to you.<br />
+<br />
+3.&nbsp;&nbsp; Your Obligations<br />
+<br />
+3.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable us to provide the Services to you, you agree:<br />
+<br />
+3.1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to comply with all relevant laws and regulations and obtain all necessary permissions and consents in your use of the Services;<br />
+<br />
+3.1.2&nbsp;&nbsp;&nbsp;&nbsp; not to use the Services or Facility for illegal, obscene, immoral or defamatory purposes;<br />
+<br />
+3.1.3&nbsp;&nbsp;&nbsp;&nbsp; not to do anything that may interfere with the use of the Facility and Equipment by us or other users of the Services;<br />
+<br />
+3.1.4.&nbsp;&nbsp;&nbsp; not to bring our name or that of the Facility into disrepute;<br />
+<br />
+3.1.5&nbsp;&nbsp;&nbsp;&nbsp; not to cause loss or damage to us or to the owner of any interest in the Facility;<br />
+<br />
+3.1.6&nbsp;&nbsp;&nbsp;&nbsp; to provide us with all information we require and to co-operate with us in the provision of the Services;<br />
+<br />
+3.1.7&nbsp;&nbsp;&nbsp;&nbsp; not to use the name Forward Space in any way in connection with your business without our prior written consent;<br />
+<br />
+3.1.8&nbsp;&nbsp;&nbsp;&nbsp; to observe all health and safety rules and regulations and any other reasonable security requirements that apply at the Facility and in the use of the Equipment;<br />
+<br />
+3.1.9&nbsp;&nbsp;&nbsp;&nbsp; to make payment for the Services in full in accordance with these terms and conditions.<br />
+<br />
+3.2&nbsp;&nbsp;&nbsp;&nbsp; Before the commencement of the Services you are required to confirm your requirements overleaf.&nbsp; You are responsible for ensuring the accuracy of this information and the fees stated prior to the commencement of the Services.<br />
+<br />
+4.&nbsp;&nbsp; Our Obligations<br />
+<br />
+4.1&nbsp;&nbsp;&nbsp;&nbsp; We will:<br />
+<br />
+4.1.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; use our reasonable endeavours to provide the Services;<br />
+<br />
+4.1.2&nbsp;&nbsp;&nbsp;&nbsp; keep you informed of all health and safety rules and regulations and any other reasonable security requirements that apply at the Facility or in relation to the Equipment;<br />
+<br />
+4.1.3&nbsp;&nbsp;&nbsp;&nbsp; obtain and maintain the necessary licences and consents to provide the Services.<br />
+<br />
+4.2&nbsp;&nbsp;&nbsp;&nbsp; We reserve the right to limit the number of unlimited desk spaces to 5 unless agreed otherwise in writing. If you wish to use more than 5 desk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spaces at any one time then the fee payable will be subject to change.<br />
+<br />
+4.3&nbsp;&nbsp;&nbsp;&nbsp; We will endeavour to provide a point of contact at the Facility and to assist you with enquiries but we do not provide secretarial or administrative support.<br />
+<br />
+5.&nbsp;&nbsp; Commencement and Duration<br />
+<br />
+5.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The Services will be provided by us to you from the date specified overleaf and, if not stated as being provided for a fixed period, shall continue to be supplied indefinitely unless and until notice is given in writing by either party at least 10 Working Days before the next invoicing date.&nbsp; Where notice of less than 10 Working Days is given we reserve the right to require payment in full.<br />
+<br />
+6.&nbsp;&nbsp; Charges and Payment<br />
+<br />
+6.1&nbsp;&nbsp;&nbsp;&nbsp; The charges payable for the Services shall be calculated in accordance with our fees set out overleaf.&nbsp; Such fees may be amended from time to time by us giving you not less than 1 month&rsquo;s notice. If you have elected for the Services to be provided for a fixed period the fees will be subject to review at the end of such fixed period.<br />
+<br />
+6.2&nbsp;&nbsp;&nbsp;&nbsp; All charges quoted by us shall be exclusive of VAT which (if applicable) we shall add to our invoices at the appropriate rate.<br />
+<br />
+6.3&nbsp;&nbsp;&nbsp;&nbsp; We shall invoice you at the beginning of each month for the Services to be performed during that month.<br />
+<br />
+6.4&nbsp;&nbsp;&nbsp; Invoiced amounts shall be due and payable within 7 days of receipt of invoice.&nbsp; You will be required to set up a standing order mandate in respect of payments due to us.<br />
+<br />
+6.5&nbsp;&nbsp;&nbsp;&nbsp; Without prejudice to any other right or remedy that we may have, if you fail to pay us on the due date, we may;<br />
+<br />
+6.5.1&nbsp;&nbsp;&nbsp; charge interest on such sum from the due date for payment at the annual rate of 4% above the base lending rate of HSBC accruing on a daily basis and being compounded quarterly until payment in full is made, whether before or after any judgment; and<br />
+<br />
+6.5.2&nbsp;&nbsp; suspend all Services until payment has been made in full.<br />
+<br />
+7.&nbsp;&nbsp; Alterations to the Services <br />
+<br />
+7.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The parties may at any time agree upon a variation to the scope of the Services being provided.&nbsp; In this case we require you to complete a new requirements form as detailed overleaf.<br />
+<br />
+7.2&nbsp;&nbsp;&nbsp;&nbsp; In the event that you wish to change the scope of Services being provided you are required to give us at least 10 Working Days&rsquo; notice detailing the change you require. We will confirm to you within 5 Working Days of such request the change to be made and any change in the price payable and any other terms applicable and in the event that your request cannot be accommodated we will advise you of the variation we would be able to accommodate. You are required to complete the form overleaf reflecting the change in the Services and amended terms. Failure to do so will result in the Services continuing on the same terms as were in existence prior to the request for change being made.<br />
+<br />
+8.&nbsp;&nbsp; Warranty<br />
+<br />
+8.1&nbsp;&nbsp;&nbsp;&nbsp; We warrant that the Services shall be performed using reasonable care and skill and of a quality conforming to generally accepted industry standards and practices.<br />
+<br />
+8.2&nbsp;&nbsp;&nbsp;&nbsp; Without prejudice to clause 8.1 and except as expressly stated in these terms and conditions, all warranties whether express or implied, by operation of law or otherwise, are hereby excluded in relation to the Services.<br />
+<br />
+9.&nbsp;&nbsp; Limitation of Liability &ndash; Your attention is particularly drawn to the provisions of this condition<br />
+<br />
+9.1&nbsp;&nbsp;&nbsp;&nbsp; Save as provided at condition 9.3 our entire liability to you in respect of any claim whatsoever or breach by us of any of these terms and conditions shall be limited to the price paid for the Services.<br />
+<br />
+9.2&nbsp;&nbsp;&nbsp;&nbsp; In no event shall we be liable to you for any loss of business, loss of opportunity or loss of profits or for any other indirect or consequential loss or damage whatsoever.<br />
+<br />
+9.3&nbsp;&nbsp;&nbsp;&nbsp; Nothing in these terms and conditions limits or excludes our liability for death or personal injury resulting from negligence or fraudulent misrepresentation by us.<br />
+<br />
+9.4&nbsp;&nbsp;&nbsp; If you or a third party (not being a sub-contractor or other agent engaged by us) shall do or omit to do anything which results in us being unable to comply with our obligations to you then we will endeavour to inform you of this as soon as possible, in such a case:<br />
+<br />
+9.4.1&nbsp;&nbsp;&nbsp;&nbsp; we will have no liability arising as a result of any delay or failure in performing the Services; and<br />
+<br />
+9.4.2&nbsp;&nbsp;&nbsp; we will notify you whether we intend to make any claim for additional costs.<br />
+<br />
+10.&nbsp; Indemnity<br />
+<br />
+10.1&nbsp;&nbsp;&nbsp; You shall indemnify us against all claims, costs and expenses incurred by us arising directly or indirectly from any breach by you of any of your obligations under these terms and conditions.<br />
+<br />
+11.&nbsp;&nbsp; Cancellation or Suspension of Services<br />
+<br />
+11.1&nbsp;&nbsp;&nbsp;&nbsp; You are required to give us at least 10 Working Days&rsquo; notice before the 1st of the next billing month if you wish to cancel or suspend the provision of the Services.<br />
+<br />
+11.2&nbsp;&nbsp;&nbsp; Without prejudice to any other rights to which we may be entitled, in the event that you terminate or cancel the Services or fail to make payment for the Services otherwise than in accordance with these terms and conditions you shall be required to pay us (as agreed damages and not as a penalty) the full amount of the Services for the notice period not given which you agree is a genuine pre-estimate of our losses.&nbsp; For the avoidance of doubt any failure by you to comply with your obligations under these terms and conditions shall be deemed to be a cancellation of the Services.<br />
+<br />
+11.3&nbsp;&nbsp;&nbsp; Use of any Services may be denied if you have not made payment for the Services or you are in breach of these terms and conditions.<br />
+<br />
+11.4&nbsp;&nbsp;&nbsp; We have the right to suspend the provision of Services due to reasons beyond our reasonable control.<br />
+<br />
+12.&nbsp; Termination<br />
+<br />
+&nbsp;12.1&nbsp;&nbsp;&nbsp; We may terminate the supply of the Services to you by notice in writing to you with immediate effect in the event that you are in breach of any of your obligations under these terms and conditions or in the event of you or any users of the Services from your organisation displaying behaviour which we deem to be highly inappropriate.&nbsp; If we terminate the supply of the Services in this way you will be required to indemnify us against all cost and losses we incur as a result of the termination.<br />
+<br />
+12.2&nbsp;&nbsp;&nbsp; Either party may terminate the supply of the Services upon giving to the other at least 10 Working Days&rsquo; notice before the 1st of the next billing month.<br />
+<br />
+13.&nbsp; Confidentiality<br />
+<br />
+13.1&nbsp;&nbsp;&nbsp; You are required to keep confidential and not use for your own purposes nor without our prior written consent, any information of a confidential nature (including, without limitation, trade secrets and information of commercial value) which relates to the Services and/or us and/or other users of the Services which may become known to you during the supply of the Services, unless such information is public knowledge or already known to you at the time of disclosure or subsequently becomes public knowledge (other than by a breach by you of this condition) or subsequently comes lawfully into your possession from a third party.<br />
+<br />
+13.2&nbsp;&nbsp;&nbsp; The provisions of this condition 13 shall remain in full force and effect notwithstanding any cancellation, suspension or termination of the Services.<br />
+<br />
+14.&nbsp; Force Majeure<br />
+<br />
+14.1&nbsp;&nbsp;&nbsp; We shall not be liable for any delay or failure to perform any of our obligations if the delay or failure results from events or circumstances outside our reasonable control, including but not limited to acts of God, strikes, lock outs, accidents, war, fire, the act or omission of government, highway authorities or any telecommunications carrier, operator or other authority, or the delay or failure in manufacture, production or supply by third parties of equipment or services.<br />
+<br />
+14.2&nbsp;&nbsp; We shall notify you of any such event falling under condition 14.1 above and the likely duration of such event.<br />
+<br />
+15.&nbsp; General<br />
+<br />
+15.1&nbsp;&nbsp;&nbsp; You are not permitted to assign or transfer any of your rights or obligations under these terms and conditions without our prior written consent.&nbsp; In the case of a multi-user requirement for the Services the names listed on the requirement will be the only parties entitled to the Services unless otherwise agreed between us in writing.<br />
+<br />
+15.2&nbsp;&nbsp;&nbsp; Any notice required to be given by either party to the other shall be served in writing to the address of the other party stated overleaf or such other address as such party may from time to time have communicated to the other in writing, and if sent by email shall unless the contrary is proved be deemed to be received on the day it was sent, if sent by fax shall be deemed to be served on receipt of an error free transmission report, if given by letter shall be deemed to have been served at the time at which the letter was delivered personally or if sent by post shall be deemed to have been delivered in the ordinary course of post.<br />
+<br />
+15.3&nbsp;&nbsp;&nbsp; Failure or delay by us in enforcing or partially enforcing any of these terms and conditions shall not be construed as a waiver of any of our rights under these terms and conditions.<br />
+<br />
+15.4&nbsp;&nbsp; The parties agree that all rights afforded to any third parties by the Contracts (Rights of Third Parties) Act 1999 shall be expressly excluded.<br />
+<br />
+15.5&nbsp;&nbsp;&nbsp; If any provision of these terms and conditions is held by any competent authority to be invalid or unenforceable in whole or in part the provision shall be deemed severable and the validity of the other provisions of these terms and conditions shall not be affected thereby.<br />
+<br />
+15.6&nbsp;&nbsp; The parties are contractors independent of each other and neither has the authority to bind the other to any third party or act in any way as the representative of the other, unless otherwise agreed in writing by the parties.<br />
+<br />
+15.7&nbsp;&nbsp;&nbsp; These terms and conditions contain the entire agreement between the parties relating to the subject matter and supersede any previous agreements, arrangements or proposals (whether written or oral) and, save as provided otherwise, may only be varied by the parties in writing.<br />
+<br />
+15.8&nbsp;&nbsp; These terms and conditions shall be governed by the laws of England and the parties submit to the exclusive jurisdiction of the Courts of England.</p></div>
+</div>
+
+</body>
+</html>
+ 

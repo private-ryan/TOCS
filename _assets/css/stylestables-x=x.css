@@ -1,0 +1,102 @@
+/* CSS Document */
+
+#deskplan {
+	float:left;
+	width:585px;
+	height:233px;
+	background:url("../images/fslayout.gif") no-repeat left top;
+	position:relative;
+	}
+#deskplan div {position:absolute}
+
+/* Room sections */
+#section1 {top:0;right:0;width:90px;height:144px;margin:13px 11px 0 0;}
+.sec1a {top:10px;left:60px;}
+.sec1b {top:15px;left:30px;}
+.sec1m {top:10px; left:52px;}
+.sec1c {top:55px;left:60px;}
+.sec1d {top:60px;left:30px;}
+.sec1n {top:55px; left:53px;}
+.sec1e {top:99px;left:60px;}
+.sec1f {top:104px;left:30px;}
+.sec1o {top:99px; left:52px;}
+
+#section2 {top:0;right:210px;width:120px;height:144px;margin:13px 11px 0 0;}
+.sec2a {top:49px;left:100px;}
+.sec2b {top:49px;left:85px;}
+.sec2m {top:86px; left:85px;}
+.sec2c {top:79px;left:105px;}
+.sec2d {top:79px;left:50px;}
+.sec2n {top:55px; left:47px;}
+.sec2e {top:94px;left:105px;}
+.sec2f {top:94px;left:50px;}
+.sec2o {top:85px; left:47px;}
+
+#section3 {top:0;right:170px;width:15px;height:100px;margin:33px 0 0 0;}
+.sec3a {top:15px;left:15px;}
+.sec3b {top:15px;left:0px;}
+.sec3m {top:7px; left:1px;}
+.sec3c {top:60px;left:0px;}
+.sec3d {top:60px;left:15px;}
+.sec3e {top:-18px;left:15px;}
+.sec3f {top:-18px;left:0px;}
+.sec3n {top:85px; left:1px;}
+
+#section4 {top:0;right:85px;width:65px;height:90px;margin:49px 11px 0 0;}
+.sec4a {top:19px;left:52px;}
+.sec4b {top:24px;left:22px;}
+.sec4m {top:19px; left:44px;}
+.sec4c {top:76px;left:20px;}
+.sec4d {top:62px;left:20px;}
+.sec4e {top:58px;left:35px;}
+.sec4f {top:42px;left:35px;}
+.sec4n {top:63px; left:57px;}
+
+#section5 {top:62px;left:248px;}
+.sec5a {top:0; left:0;}
+
+#section6 {top:62px;left:132px;}
+.sec6a {top:0; left:0;}
+
+#section7 {top:0;left:21px;width:65px;height:90px;margin:49px 11px 0 0;}
+.sec7a {top:15px;left:20px;}
+.sec7b {top:15px;left:35px;}
+.sec7m {top:50px; left:20px;}
+.sec7c {top:58px;left:-15px;}
+.sec7d {top:42px;left:-15px;}
+.sec7e {top:58px;left:40px;}
+.sec7f {top:42px;left:40px;}
+
+
+#key {
+clear: left;
+border: solid 1px #999999;
+padding: 5px;
+height: 75px;
+width: 371px;
+position:absolute;
+top:140px; left:1px;
+}
+#key table {
+	width:370px;
+	}
+#key td {
+	text-align:center;
+	width:20%;
+	vertical-align:top;
+	}
+.confirm_book {
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:200;
+	}
+.key_hole {
+float: left;
+width: 80px;
+text-align:center;
+}
+
+.clear {
+clear: both;
+}
